@@ -688,3 +688,98 @@ Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/faq-page)
 $
 
 ```
+
+### Exercise 2
+
+```bash
+
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/home-page-redesign)
+$ git log
+commit 8eaed004d37e6eccc229d26a57e387ce2119db13 (HEAD -> ft/home-page-redesign)
+Author: Josue Igiraneza <igiranezaj28@gmail.com>
+Date:   Mon Apr 22 19:59:12 2024 +0200
+
+    Updated Readme
+
+commit 50f6a6b4b325039c043a02c0bb70192c56f31f17
+Author: Josue Igiraneza <igiranezaj28@gmail.com>
+Date:   Mon Apr 22 19:50:53 2024 +0200
+
+    Revert "Created Team page"
+
+    This reverts commit 6feb281068532e5baee5327e0fc2bca031166ee0.
+
+commit 24b6972f2f58cbcae7daee9ec692e12497225971
+Author: Josue Igiraneza <igiranezaj28@gmail.com>
+Date:   Mon Apr 22 19:43:41 2024 +0200
+
+    Create FAQ page
+
+commit fdbf649bee04decc63d3818d24b35adade489ade
+Author: Josue Igiraneza <igiranezaj28@gmail.com>
+Date:   Mon Apr 22 19:36:44 2024 +0200
+
+    Created contact page
+
+commit f62e71ab916985535f1089c9caa2463650fb1e20
+Author: Josue Igiraneza <igiranezaj28@gmail.com>
+Date:   Mon Apr 22 17:49:55 2024 +0200
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/home-page-redesign)
+$ git add .
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   home.html
+
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/home-page-redesign)
+$ git commit -m "Add list to Homepage"
+[ft/home-page-redesign a976071] Add list to Homepage
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/home-page-redesign)
+$ git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/home-page-redesign)
+$ git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 23, done.
+Counting objects: 100% (23/23), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (20/20), 5.01 KiB | 1.67 MiB/s, done.
+Total 20 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), done.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/IGIRANEZAJosue/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-redesig
+n
+remote:
+To https://github.com/IGIRANEZAJosue/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/home-page-redesign)
+$
+
+```
