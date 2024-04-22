@@ -683,3 +683,79 @@ Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/service-red
 $
 ```
 
+## Bundle 4
+
+### Exercise 1
+
+```bash
+
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 1 and 9 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (main)
+$ git remote add git-copy https://github.com/IGIRANEZAJosue/bundle-4-exercise-1.git
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (main)
+$ git remote
+git-copy
+origin
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (main)
+$ git add .
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (main)
+$ git commit -m "changes to homepage - bundle 4 ex 1"
+[main caa2897] changes to homepage - bundle 4 ex 1
+ 1 file changed, 2 insertions(+)
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (main)
+$ git push origin
+To https://github.com/IGIRANEZAJosue/Gym-Git-Exercise-Solutions.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/IGIRANEZAJosue/Gym-Git-Exercise-Solutions.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (main)
+$ git pull
+Merge made by the 'ort' strategy.
+ README.md | 317 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ team.html |  13 +++
+ 2 files changed, 330 insertions(+)
+ create mode 100644 team.html
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (main)
+$ git push origin
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 631 bytes | 315.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/IGIRANEZAJosue/Gym-Git-Exercise-Solutions.git
+   293ab1c..cb1bb6f  main -> main
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (main)
+$ git push git-copy
+Enumerating objects: 59, done.
+Counting objects: 100% (59/59), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (56/56), done.
+Writing objects: 100% (59/59), 10.66 KiB | 496.00 KiB/s, done.
+Total 59 (delta 26), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (26/26), done.
+To https://github.com/IGIRANEZAJosue/bundle-4-exercise-1.git
+ * [new branch]      main -> main
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (main)
+$
+
+```
