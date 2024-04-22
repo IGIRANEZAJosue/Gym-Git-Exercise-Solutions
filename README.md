@@ -759,3 +759,159 @@ Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (main)
 $
 
 ```
+
+### Exercise 2
+
+```bash
+
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/footer)
+$ git add .
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/footer)
+$ git commit -m "Made changes to some files"
+[ft/footer f3fcf38] Made changes to some files
+ 2 files changed, 4 insertions(+)
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/footer)
+$ git add .
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/footer)
+$ git commit -m "Made changes to some files(again)"
+[ft/footer c58f366] Made changes to some files(again)
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/footer)
+$ git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/footer
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/footer)
+$ git push --set-upstream origin ft/footer
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 955 bytes | 955.00 KiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/IGIRANEZAJosue/Gym-Git-Exercise-Solutions/pull/new/ft/footer
+remote:
+To https://github.com/IGIRANEZAJosue/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/footer)
+$ git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+        home.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/footer)
+$ git push --set-upstream origin ft/footer
+Everything up-to-date
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/footer)
+$ git push origin ft/footer
+Everything up-to-date
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/footer)
+$ git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+        home.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/footer)
+$ git comit -m "home"
+git: 'comit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/footer)
+$ git comnmit -m "home"
+git: 'comnmit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/footer)
+$ git commit -m "home"
+On branch ft/footer
+Your branch is up to date with 'origin/ft/footer'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/footer)
+$ git add .
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/footer)
+$ git commit -m "home"
+[ft/footer 9e0efdf] home
+ 1 file changed, 5 insertions(+)
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/squashing)
+$ git merge --squash ft/footer
+Updating 8de0618..9e0efdf
+Fast-forward
+Squash commit -- not updating HEAD
+ about.html | 8 ++++++++
+ home.html  | 7 +++++++
+ 2 files changed, 15 insertions(+)
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/squashing)
+$ git commit -m "Footer changes squashing"
+[ft/squashing 085d2ad] Footer changes squashing
+ 2 files changed, 15 insertions(+)
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/squashing)
+$ git push origin ft/squashing
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 727 bytes | 727.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/IGIRANEZAJosue/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote:
+To https://github.com/IGIRANEZAJosue/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/squashing)
+$
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/squashing)
+$
+
+```
