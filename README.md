@@ -366,3 +366,103 @@ Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (main)
 $
 
 ```
+
+## Bundle 2
+
+### Exercise 1
+
+```bash 
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (main)
+$ git branch ft/bundle-2
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (main)
+$ git branch
+  dev
+  ft/bundle-2
+* main
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (main)
+$ git checkout ft/bundle-2
+Switched to branch 'ft/bundle-2'
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/bundle-2)
+$ git commit -a -m "Added services"
+On branch ft/bundle-2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        services.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/bundle-2)
+$ git add .
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/bundle-2)
+$ git commit -a -m "Added services"
+[ft/bundle-2 512f95b] Added services
+ 1 file changed, 13 insertions(+)
+ create mode 100644 services.html
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+nothing to commit, working tree clean
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/bundle-2)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> ft/bundle-2
+
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/bundle-2)
+$ git pull main
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/bundle-2)
+$ git push origin
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/bundle-2)
+$ ^C
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/bundle-2)
+$ git push --set-upstream origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 434 bytes | 434.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/IGIRANEZAJosue/Gym-Git-Exercise-Solutions/pull/new/ft/bundle-2
+remote:
+To https://github.com/IGIRANEZAJosue/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+
+Igiraneza@DESKTOP-2M35984 MINGW64 ~/Desktop/Native/git-exercises (ft/bundle-2)
+$
+
+```
+
